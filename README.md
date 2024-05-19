@@ -10,7 +10,7 @@ The game consists of the following entities:
 
 1. **Server (`server.js`):** This file sets up the Node.js server using Express.js and Socket.io. It handles client connections, serves the static files (HTML, CSS, JavaScript), and manages game logic using `game.js`.
 
-2. **Game Logic (`game.js`):** This file contains the logic for managing the game state, including player moves, win conditions, and resetting the game.
+2. **Game Logic (`game.js` , `gameLogic.js`):** These file contains the logic for managing the game state, including player moves, win conditions.
 
 3. **Client (`index.html`, `script.js`, `styles.css`):** These files define the user interface for the game. `index.html` contains the HTML structure, `script.js` handles client-side interactions and Socket.io events, and `styles.css` provides the styling for the UI.
 

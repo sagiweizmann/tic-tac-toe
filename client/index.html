@@ -3,44 +3,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="socket.io/socket.io.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 
 <body>
-<style>
-    #main {
-        display: flex;
-        flex-direction: column;
-    }
-    .board {
-        margin: auto;
-        width: 490px;
-    }
-
-    .board button {
-        height: 150px;
-        width: 150px;
-        float: left;
-        margin: 5px;
-        font-size: 3em;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    .status {
-        display: flex;
-        flex-direction:row;
-        align-items: center;
-    }
-    #message {
-        font-size: 2rem;
-        text-align: center;
-    }
-</style>
-
 <div id="main">
-    <h1>Welcome to Tic-Tac-Toe</h1>
+    <h1>Simple Tic-Tac-Toe</h1>
+
+    <h2 id="player">You are :</h2>
 
     <div class="board">
         <button data-position="0"></button> <button data-position="1"></button> <button data-position="2"></button>

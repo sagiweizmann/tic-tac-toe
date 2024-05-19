@@ -1,0 +1,48 @@
+body {
+    background-image: url("background.jpg");
+    color:white;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.board {
+    margin: auto;
+    width: 490px;
+}
+
+.board button {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 5px;
+    font-size: 3em;
+}
+
+button:disabled {
+    background-color: rgba(239, 239, 239, 0.9);
+    color: rgba(16, 16, 16, 0.9);
+    border-color: white;
+}
+
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+}
+
+.status {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+#message {
+    font-size: 2rem;
+    text-align: center;
+}

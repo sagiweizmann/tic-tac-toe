@@ -1,0 +1,58 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+<style>
+    #main {
+        display: flex;
+        flex-direction: column;
+    }
+    .board {
+        margin: auto;
+        width: 490px;
+    }
+
+    .board button {
+        height: 150px;
+        width: 150px;
+        float: left;
+        margin: 5px;
+        font-size: 3em;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .status {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+    }
+    #message {
+        font-size: 2rem;
+        text-align: center;
+    }
+</style>
+
+<div id="main">
+    <h1>Welcome to Tic-Tac-Toe</h1>
+
+    <div class="board">
+        <button data-position="0"></button> <button data-position="1"></button> <button data-position="2"></button>
+        <button data-position="3"></button> <button data-position="4"></button> <button data-position="5"></button>
+        <button data-position="6"></button> <button data-position="7"></button> <button data-position="8"></button>
+    </div>
+
+    <div class="status">
+        <h1>Status:</h1>
+        <div id="message">Waiting for an opponent...</div>
+    </div>
+</div>
+
+</body>
+</html>

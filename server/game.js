@@ -1,4 +1,4 @@
-let players = {}; // opponent: socket.id of the opponent, symbol = "X" | "O", socket: player's socket
+let players = {};
 let unmatched;
 
 class Game {

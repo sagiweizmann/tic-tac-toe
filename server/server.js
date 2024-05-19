@@ -3,7 +3,7 @@ import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
 import fs from 'fs';
-import { handleConnection } from './game.js';
+import { handleConnection } from './gameLogic.js';
 
 import dotenv from 'dotenv';
 dotenv.config();

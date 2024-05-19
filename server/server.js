@@ -1,24 +1,29 @@
-const http = require("http");
-const express = require("express");
-const socketIo = require("socket.io");
-const fs = require("fs");
-const { handleConnection } = require("./game");
+import path from 'path';
+import express from 'express';
+import http from 'http';
+import { Server } from 'socket.io';
+import fs from 'fs';
+import { handleConnection } from './game.js';
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Set up server
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = new Server(server);
 const clients = {};
 
 // Serve static resources
-app.use(express.static(__dirname + "/../client/"));
-app.use(express.static(__dirname + "/../node_modules/"));
+const clientPath = path.resolve(new URL('../client/', import.meta.url).pathname);
+app.use(express.static(clientPath));
 
 // Serve index.html on root request
 app.get("/", (req, res) => {
-    const stream = fs.createReadStream(__dirname + "/../client/index.html");
+    const indexPath = path.resolve(new URL('../client/index.html', import.meta.url).pathname);
+    const stream = fs.createReadStream(indexPath);
     stream.pipe(res);
 });
 

@@ -106,4 +106,4 @@ function handleConnection(socket, io, clients) {
     });
 }
 
-module.exports = { handleConnection };
+export { handleConnection };
